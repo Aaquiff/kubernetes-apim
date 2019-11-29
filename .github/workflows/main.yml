@@ -9,6 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: package
+    - name: install-helm
       run: |
         ls
+        wget https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+        sh get-helm-3
+        
