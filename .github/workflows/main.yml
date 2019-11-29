@@ -8,6 +8,7 @@ jobs:
     runs-on: alpine/helm
     
     steps:
+    - uses: actions/checkout@v1
     - name: package
       run: |
         helm package advanced/mysql-am
