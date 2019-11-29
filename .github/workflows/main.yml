@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  package:
+
+    runs-on: alpine/helm
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: package
+      run: |
+        helm init --client-only
+        helm package advanced/mysql-am
