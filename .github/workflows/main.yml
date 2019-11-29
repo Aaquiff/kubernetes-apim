@@ -20,6 +20,4 @@ jobs:
     - name: package-chart
       run: |
         helm package -u advanced/mysql-am
-        helm chart push --username ${{ secrets.HELM_REPO_USERNAME }} --password ${{ secrets.HELM_REPO_PASSWORD }} mysql-am-*.tgz wso2
-        rm mysql-am-*.tgz
-        
+        helm chart push --username admin --password admin mysql-am-*.tgz wso2
