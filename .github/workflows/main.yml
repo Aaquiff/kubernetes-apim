@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  package:
+
+    runs-on: alpine/helm
+    
+    steps:
+    - name: package
+      run: |
+        helm package advanced/mysql-am
