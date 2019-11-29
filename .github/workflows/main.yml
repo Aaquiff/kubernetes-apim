@@ -12,4 +12,3 @@ jobs:
     - name: package
       run: |
         helm init --client-only
-        helm package advanced/mysql-am
