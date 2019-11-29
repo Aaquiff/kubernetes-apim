@@ -18,5 +18,7 @@ jobs:
         helm
     - name: package-chart
       run: |
+        helm repo add wso2 https://helm.wso2.com
         helm package -u advanced/mysql-am
+        helm push --username ${{ secrets.HELM_REPO_USERNAME }} --password ${{ secrets.HELM_REPO_PASSWORD }} *.tgz wso2
         
