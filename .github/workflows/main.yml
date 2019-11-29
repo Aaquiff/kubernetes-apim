@@ -21,4 +21,4 @@ jobs:
         password: ${{ secrets.HELM_REPO_PASSWORD }}
       run: |
         helm package -u advanced/mysql-am
-        curl --user $username:ZWGgkCAI6yLeis2q7Hc --data-binary "@mysql-am-3.0.0-2.tgz" https://helm.wso2.com/api/charts
+        curl --user $username:ZWGgkCAI6yLeis2q7Hc --data-binary "@mysql-am-*.tgz" https://helm.wso2.com/api/charts
