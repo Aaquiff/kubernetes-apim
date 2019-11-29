@@ -16,7 +16,7 @@ jobs:
         chmod 700 get_helm.sh
         ./get_helm.sh
         helm
-    - name: install-helm
+    - name: package-chart
       run: |
-        helm package advanced/mysql-am
+        helm package -u advanced/mysql-am
         
